@@ -1,56 +1,49 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-    </v-main>
-  </v-app>
+  <div id="app">
+    <Form />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
+import Form from "./components/Form.vue";
 export default {
   name: "App",
-
   components: {
-    HelloWorld,
+    Form,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
+
+<style>
+#app {
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
+  color: #2c3e50;
+  background-color: #fafafa;
+  padding: 24px;
+  box-sizing: border-box;
+  -webkit-text-fill-color: #001a34;
+  border: 0;
+  caret-color: #005bff;
+  color: inherit;
+  font-family: GTEestiPro, arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 10px;
+  outline: none;
+  text-align: inherit;
+  vertical-align: top;
+  width: 100%;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
+
+<style lang="scss">
+@import "../node_modules/@braid/vue-formulate/themes/snow/snow.scss";
+</style>
